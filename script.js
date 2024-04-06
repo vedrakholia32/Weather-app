@@ -26,7 +26,7 @@ const getWeather = (city) =>{
     document.getElementById('humidity2').innerHTML = response.main.humidity
     document.getElementById('visibility').innerHTML = response.visibility
     // document.getElementById('pressure').innerHTML = response.main.pressure
-    document.getElementById('wind_speed').innerHTML = response.wind.speed*3.6
+    document.getElementById('wind_speed').innerHTML = Math.round(response.wind.speed*3.6)
     document.getElementById('wind_speed2').innerHTML = Math.round(response.wind.speed*3.6)
   })
   .catch(err => console.error(err));
